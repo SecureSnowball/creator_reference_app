@@ -33,6 +33,25 @@ class _MyDrawerState extends State<MyDrawer> {
             ),
             const Divider(),
             ListTile(
+              leading: const Icon(Icons.dashboard),
+              title: const Text('Countries'),
+              selected: currentRoute == 'country_index',
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, 'country_index');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.dashboard),
+              title: const Text('Add New Country'),
+              selected: currentRoute == 'country_create',
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, 'country_create');
+              },
+            ),
+            const Divider(),
+            ListTile(
               leading: const Icon(Icons.delete_forever),
               title: const Text('Logout'),
               onTap: () async {

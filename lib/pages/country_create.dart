@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/components/global/my_drawer.dart';
 
-class Dashboard extends StatefulWidget {
-  const Dashboard({Key? key}) : super(key: key);
+class CountryCreate extends StatefulWidget {
+  const CountryCreate({Key? key}) : super(key: key);
 
   @override
-  _DashboardState createState() => _DashboardState();
+  _CountryCreateState createState() => _CountryCreateState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _CountryCreateState extends State<CountryCreate> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const MyDrawer(),
       extendBody: true,
       appBar: AppBar(
-        title: const Text('Dashboard'),
+        title: const Text('Add new Country'),
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: const SafeArea(
         child: Center(
-          child: Text('Welcome to dashboard'),
+          child: Text('add new country'),
         ),
       ),
     );
